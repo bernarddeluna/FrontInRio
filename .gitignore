@@ -1,0 +1,12 @@
+*.pyc
+*~
+.Python
+.DS_Store
+*.swp
+bin/
+include/
+lib/
+logs/
+application/database.sqlite
+application/settings.py
+application/settings.py.prod

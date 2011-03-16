@@ -1,0 +1,164 @@
+{% load static %}
+{% get_static_prefix as STATIC_URL %}
+<!doctype html>  
+
+<!--[if lt IE 7 ]> <html lang="pt-br" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="pt-br" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="pt-br" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="pt-br" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>FrontInRio 2011</title>
+  <meta name="description" content="O mundo do desenvolvimento Front End no Rio de Janeiro">
+  <meta name="author" content="Leo Balter">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  {% block canonical %}
+  <link rel="caninocal" href="http://www.frontinrio.com.br">
+  {% endblock %}
+{% comment %}
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+{% endcomment %}
+
+  <link href="http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/style.css?v=2">
+  <script src="{{ STATIC_URL }}js/libs/modernizr-1.6.min.js"></script>
+
+</head>
+
+<body>
+
+  <div id="container">
+    <header>
+        {% block header %}
+            <a href="http://www.frontinrio.com.br" title="FrontInRio 2011" id="logo">
+                <img src="{{ STATIC_URL }}img/front_in_rio.png" alt="FrontInRio 2011">
+            </a>
+        {% endblock %}
+    </header>
+    
+    <div id="main" class="main">
+        {% block main %}
+            <h1>FrontInRio 2011</h1>
+            
+            <h2>O evento</h2>
+
+            <article>
+                <h3>Quando será?</h3>
+                <p class="phrase original">Assim que confirmarmos. Em breve! Fique ligado!</p>
+                <h3>Onde será?</h3>
+                <p class="phrase original">Com certeza no Rio de Janeiro. O local exato ainda será definido!</p>
+                <nav id="share">
+                    <ul class="clearfix">
+    					<li>
+                            <a href="http://twitter.com/share" class="twitter-share-button" 
+                                    data-text="O mundo do desenvolvimento Front End no Rio de Janeiro! Em breve!" 
+                                    data-count="horizontal" data-via="FrontInRio">Tweet</a>
+                            <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+                        </li>
+                        <li>
+                            <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+                            <fb:like href="http://www.frontinrio.com.br" layout="standard" show_faces="true" width="440"></fb:like>
+                        </li>
+                    </ul>
+                </nav>
+            </article>
+             
+            <article>
+                <h2>Os temas do evento</h2>
+                
+                <ul id="temas">
+                    <li>
+                        <h3>Testes em Javascript</h3>
+                        
+                        <section class="description">
+                            Nesta palestra, será abordado:
+                            <ul>
+                                <li>como seu código javascript pode ser escrito para ser "testável";</li>
+                                <li>o que é "mock" em termos de teste unitário e como executar em código client;</li>
+                                <li>algumas ferramentas de teste e de mock mais usadas e</li>
+                                <li>filosofia de testes em outras linguagens, como Python, trazidas para o código client.</li>
+                            </ul>
+                        </section>
+                        <h4>Palestrantes: Márcio Santana e Raphael Almeida</h4>
+                    </li>
+                    <li>
+                        <h3>Ajax Crawling Links</h3>
+                        <p class="description">Uma melhor forma de trazer conteúdos exclusivos do site dando maior força à indexação das páginas principais do mesmo. Requisições em AJAX de parte do conteúdo passado via hash.</p>
+                        <h4>Palestrante: ainda não confirmado</h4>
+                    </li>
+                    <li>
+                        <h3>API Mashups</h3>
+                        <p class="description">Integração de diversas APIs: Google Maps + Geolocation do HTML 5, APIs de redes sociais, etc.</p>
+                        <h4>Palestrante: Bruno Dulcetti</h4>
+                    </li>
+                    <li>
+                        <h3>Padrões Javascript</h3>
+                        <p class="description">Padrões e antipadrões em Javascript em prática. Utilização da ferramenta <a href="http://jshint.com" title="Site do JSHint" rel="nofollow">JSHint</a> para melhor utilização do código com convenções e sem permitir bolas de lama.</p>
+                        <h4>Palestrante: Leo Balter</h4>
+                    </li>
+                    <li>
+                        <h3>Performance em Front End - PageSpeed nota 100</h3>
+                        <p class="description">Veja o que pode ser feito para melhorarmos os resultados do Pagespeed, YSlow e Audit do Chrome. Minimização de código, utilização de cache, background sprites, etc</p>
+                        <h4>Palestrante: ainda não confirmado</h4>
+                    </li>
+                    <li>
+                        <h3>Criação de plugins em jQuery</h3>
+                        <p class="description">Passo a passo sobre como criar um plugin em jQuery, e a melhor forma de divulga-lo e conseguir interação com a comunidade, para uma criação colaborativa.</p>
+                        <h4>Palestrante: ainda não confirmado</h4>
+                    </li>
+                    <li>
+                        <h3>Mercado de Trabalho Front End</h3>
+                        <p class="description">O que o profissional deve fazer para entrar no mercado de trabalho de front end ou até se especializar cada vez mais. Quais caminhos seguir, onde e como estudar, estratégias. </p>
+                        <h4>Palestrante: mesa redonda com convidados</h4>
+                    </li>
+                </ul>
+            </article>
+        {% endblock %}
+    </div>
+    
+    {% block footer %}
+	    <footer class="main">
+	        <section id="about">
+	            <h2>Como entro em contato?</h2>
+	            <p>Por enquanto você pode mandar um email para <a href="emailto:contato@frontinrio.com.br" title="Entre em contato com a equipe do FrontInRio">contato@frontinrio.com.br</a>.</p>
+	        </section>
+
+			{# % include 'hcard.html' % #}
+	    </footer>
+	{% endblock %}
+  </div> <!-- end of #container -->
+
+{% comment %}
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="{{ STATIC_URL }}js/libs/jquery-1.4.2.js"%3E%3C/script%3E'))</script>
+
+  <script src="{{ STATIC_URL }}js/plugins.js"></script>
+  <script src="{{ STATIC_URL }}js/script.js"></script>
+
+  <!--[if lt IE 7 ]>
+    <script src="{{ STATIC_URL }}js/libs/dd_belatedpng.js"></script>
+    <script> DD_belatedPNG.fix('img, .png_bg'); </script>
+  <![endif]-->
+{% endcomment %}
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-21681041-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+</body>
+</html>
